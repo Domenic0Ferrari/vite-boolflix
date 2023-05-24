@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="card">
         <div>
             {{ title }}
         </div>
@@ -27,4 +27,9 @@ export default {
 </template>
 
 
-<style scoped></style>
+<style scoped>
+.card {
+    height: 100px;
+    border: 1px solid black;
+}
+</style>

@@ -20,4 +20,13 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+    max-width: 1000px;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+</style>
