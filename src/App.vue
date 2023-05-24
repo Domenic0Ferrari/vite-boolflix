@@ -1,4 +1,5 @@
 <script>
+import AppHeader from './components/AppHeader.vue'
 import axios from 'axios';
 import { store } from './store';
 export default {
@@ -8,7 +9,7 @@ export default {
     }
   },
   components: {
-
+    AppHeader
   },
   methods: {
     RequestMoviesFromApi() {
@@ -21,7 +22,9 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+  <AppHeader />
+</template>
 
 <style>
 * {
