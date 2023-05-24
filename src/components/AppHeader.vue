@@ -1,6 +1,15 @@
 <script>
 export default {
-
+    data() {
+        return {
+            SearchBar: "",
+        }
+    },
+    methods: {
+        emitSearchBar() {
+            this.$emit('performSearch');
+        },
+    },
 }
 </script>
 

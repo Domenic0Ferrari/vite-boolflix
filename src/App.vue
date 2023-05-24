@@ -1,4 +1,5 @@
 <script>
+import AppMain from './components/AppMain.vue'
 import AppHeader from './components/AppHeader.vue'
 import axios from 'axios';
 import { store } from './store';
@@ -9,7 +10,8 @@ export default {
     }
   },
   components: {
-    AppHeader
+    AppHeader,
+    AppMain,
   },
   methods: {
     RequestMoviesFromApi() {
@@ -17,13 +19,14 @@ export default {
     }
   },
   created() {
-    axios.get("https://api.themoviedb.org/3/search/movie?api_key=bfc4b1b7a0f2098e7faca48ae85e05a5&query=all").then(response => { console.log(response.data) });
+    axios.get("https://api.themoviedb.org/3/search/movie?api_key=bfc4b1b7a0f2098e7faca48ae85e05a5&query=all").then(response => { console.log(response.data.results) });
   },
 }
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader @performSearch="RequestMoviesFromApi" />
+  <AppMain />
 </template>
 
 <style>
