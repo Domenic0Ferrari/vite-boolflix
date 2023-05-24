@@ -29,7 +29,12 @@ export default {
 
 <style scoped>
 .card {
-    height: 100px;
+    height: 200px;
+    width: calc((100% - 4rem)/ 5);
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 </style>

@@ -27,6 +27,6 @@ export default {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 </style>
