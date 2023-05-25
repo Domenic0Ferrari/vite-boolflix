@@ -14,13 +14,22 @@ export default {
     AppMain,
   },
   methods: {
-    RequestMoviesFromApi() {
+    RequestDataFromApi() {
       axios.get("https://api.themoviedb.org/3/search/movie", {
         params: {
           api_key: "bfc4b1b7a0f2098e7faca48ae85e05a5",
           query: this.store.SearchBar,
         },
       }).then((response) => (this.store.ArrMovies = response.data.results));
+
+      axios
+        .get('https://api.themoviedb.org/3/search/tv', {
+          params: {
+            api_key: "bfc4b1b7a0f2098e7faca48ae85e05a5",
+            query: this.store.SearchBar,
+          }
+        })
+        .then(response => (this.store.ArrTvSeries = response.data.results));
     },
   }
 }
@@ -30,7 +39,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader @searchPerformed="RequestMoviesFromApi" />
+  <AppHeader @searchPerformed="RequestDataFromApi" />
   <AppMain />
 </template>
 
