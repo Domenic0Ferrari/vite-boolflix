@@ -1,5 +1,9 @@
 <script>
 export default {
+    data() {
+        return {
+        }
+    },
     methods: {
         convertVote(vote) {
             const convertedVote = Math.ceil(vote / 2);
