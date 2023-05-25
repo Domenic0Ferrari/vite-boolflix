@@ -1,5 +1,11 @@
 <script>
 export default {
+    methods: {
+        convertVote(vote) {
+            const convertedVote = Math.ceil(vote / 2);
+            return convertedVote;
+        },
+    },
     props: {
         title: String,
         original_language: String,
@@ -12,16 +18,20 @@ export default {
 <template>
     <div class="card">
         <div>
+            <span>TITOLO:</span>
             {{ title }}
         </div>
         <div>
-            {{ original_language }}
-        </div>
-        <div>
+            <span>TITOLO ORIGINALE:</span>
             {{ original_title }}
         </div>
         <div>
-            {{ vote_average }}
+            <span>LINGUA ORIGINALE:</span>
+            {{ original_language }}
+        </div>
+        <div>
+            <span>VOTO:</span>
+            {{ convertVote(vote_average) }}
         </div>
     </div>
 </template>
@@ -29,8 +39,8 @@ export default {
 
 <style scoped>
 .card {
-    height: 200px;
-    width: calc((100% - 4rem)/ 5);
+    height: 300px;
+    width: calc((100% - 2rem)/ 3);
     border: 1px solid black;
     display: flex;
     flex-direction: column;
