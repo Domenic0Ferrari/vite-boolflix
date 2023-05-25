@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader @performSearch="RequestMoviesFromApi" />
+  <AppHeader @searchPerformed="RequestMoviesFromApi" />
   <AppMain />
 </template>
 

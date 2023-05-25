@@ -7,9 +7,9 @@ export default {
         }
     },
     methods: {
-        // emitSearchBar() {
-        //     this.$emit('performSearch');
-        // },
+        emitSearchBar() {
+            this.$emit('searchPerformed');
+        },
     },
 }
 </script>
@@ -20,8 +20,8 @@ export default {
             <h1>BOOLFLIX</h1>
             <div class="search">
                 <input type="text" placeholder="Cerca Film o SerieTV" v-model="store.SearchBar"
-                    @keyup.enter="this.$emit('performSearch')">
-                <button @click="this.$emit('performSearch')">SEARCH</button>
+                    @keyup.enter="emitSearchBar">
+                <button @click="emitSearchBar">SEARCH</button>
             </div>
         </div>
     </header>

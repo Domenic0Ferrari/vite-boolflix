@@ -25,6 +25,7 @@ export default {
     max-width: 1000px;
     padding: 1rem;
     margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
