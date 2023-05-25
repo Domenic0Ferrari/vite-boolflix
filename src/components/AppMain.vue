@@ -22,8 +22,8 @@ export default {
         </div>
         <h2>SERIE TV</h2>
         <div class="founded">
-            <AppCard v-for="movies in store.ArrTvSeries" :title="movies.title" :original_language="movies.original_language"
-                :vote_average="movies.vote_average" :original_title="movies.original_title" />
+            <AppCard v-for="series in store.ArrTvSeries" :title="series.name" :original_language="series.original_language"
+                :vote_average="series.vote_average" :original_title="series.original_name" />
         </div>
 
     </div>

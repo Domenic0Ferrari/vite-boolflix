@@ -23,7 +23,7 @@ export default {
       }).then((response) => (this.store.ArrMovies = response.data.results));
 
       axios
-        .get('https://api.themoviedb.org/3/search/tv', {
+        .get("https://api.themoviedb.org/3/search/tv", {
           params: {
             api_key: "bfc4b1b7a0f2098e7faca48ae85e05a5",
             query: this.store.SearchBar,
