@@ -1,8 +1,13 @@
 <script>
+// import flag
+import CountryFlag from 'vue-country-flag-next'
 export default {
     data() {
         return {
         }
+    },
+    components: {
+        CountryFlag
     },
     methods: {
         convertVote(vote) {
@@ -31,7 +36,12 @@ export default {
         </div>
         <div>
             <span>LINGUA ORIGINALE:</span>
-            {{ original_language }}
+            <country-flag v-if="original_language === 'en'" country='gb' size='normal' />
+            <country-flag v-else-if="original_language === 'ko'" country='kr' size='normal' />
+            <country-flag v-else-if="original_language === 'ja'" country='jp' size='normal' />
+            <country-flag v-else-if="original_language === 'zh'" country='cn' size='normal' />
+            <country-flag v-else-if="original_language === 'hi'" country='in' size='normal' />
+            <country-flag v-else :country='original_language' size='normal' />
         </div>
         <div>
             <span>VOTO:</span>

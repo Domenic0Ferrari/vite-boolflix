@@ -1,7 +1,5 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-// import flag
-import CountryFlag from 'vue-country-flag-next'
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core';
 /* import font awesome icon component */
