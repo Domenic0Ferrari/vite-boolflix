@@ -59,7 +59,7 @@ export default {
                     <div v-if="vote_average > 0" v-for="index in convertVote(vote_average)" :key="index">
                         <font-awesome-icon icon="fa-star" />
                     </div>
-                    <div v-else><font-awesome-icon :icon="['far', 'star']" /></div>
+                    <div v-else v-for="index in 5"><font-awesome-icon :icon="['far', 'star']" /></div>
                 </div>
             </div>
         </div>
