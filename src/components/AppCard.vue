@@ -53,8 +53,12 @@ export default {
             </div>
             <div>
                 <span>VOTO:</span>
-                <font-awesome-icon v-if="vote_average === 1" icon="fa-star" />
-                {{ convertVote(vote_average) }}
+                <div class="star">
+                    <div v-if="vote_average > 0" v-for="index in convertVote(vote_average)" :key="index">
+                        <font-awesome-icon icon="fa-star" />
+                    </div>
+                    <!-- <div v-else><font-awesome-icon icon="fa-star" /></div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -84,5 +88,10 @@ export default {
 .img_card {
     max-width: 100%;
     height: 100%;
+}
+
+.star {
+    display: flex;
+    justify-content: space-around;
 }
 </style>
