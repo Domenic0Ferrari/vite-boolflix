@@ -71,7 +71,7 @@ export default {
 <style scoped>
 .card {
     width: calc((100% - 2rem)/ 3);
-    border: 1px solid black;
+    border: 2px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
