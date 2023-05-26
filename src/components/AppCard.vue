@@ -47,6 +47,7 @@ export default {
                 </div>
                 <div>
                     <span>LINGUA ORIGINALE:</span>
+                    <br>
                     <country-flag v-if="original_language === 'en'" country='gb' size='normal' />
                     <country-flag v-else-if="original_language === 'ko'" country='kr' size='normal' />
                     <country-flag v-else-if="original_language === 'ja'" country='jp' size='normal' />
@@ -130,5 +131,6 @@ export default {
 .star {
     display: flex;
     justify-content: space-around;
+    color: gold;
 }
 </style>
