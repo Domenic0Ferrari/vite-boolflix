@@ -1,6 +1,7 @@
 <script>
 // import flag
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import CountryFlag from 'vue-country-flag-next'
 export default {
     data() {
@@ -9,7 +10,8 @@ export default {
     },
     components: {
         CountryFlag,
-        faStar
+        far,
+        fas
     },
     methods: {
         convertVote(vote) {
@@ -57,7 +59,7 @@ export default {
                     <div v-if="vote_average > 0" v-for="index in convertVote(vote_average)" :key="index">
                         <font-awesome-icon icon="fa-star" />
                     </div>
-                    <!-- <div v-else><font-awesome-icon icon="fa-star" /></div> -->
+                    <div v-else><font-awesome-icon :icon="['far', 'star']" /></div>
                 </div>
             </div>
         </div>
