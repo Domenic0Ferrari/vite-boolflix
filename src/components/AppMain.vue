@@ -18,12 +18,14 @@ export default {
         <h2>FILM</h2>
         <div class="founded">
             <AppCard v-for="movies in store.ArrMovies" :title="movies.title" :original_language="movies.original_language"
-                :vote_average="movies.vote_average" :original_title="movies.original_title" />
+                :vote_average="movies.vote_average" :original_title="movies.original_title"
+                :poster_path="movies.poster_path" />
         </div>
         <h2>SERIE TV</h2>
         <div class="founded">
             <AppCard v-for="series in store.ArrTvSeries" :title="series.name" :original_language="series.original_language"
-                :vote_average="series.vote_average" :original_title="series.original_name" />
+                :vote_average="series.vote_average" :original_title="series.original_name"
+                :poster_path="series.poster_path" />
         </div>
 
     </div>
