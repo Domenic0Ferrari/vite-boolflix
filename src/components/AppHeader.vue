@@ -28,6 +28,10 @@ export default {
 </template>
 
 <style scoped>
+header {
+    background-color: black;
+}
+
 .container {
     margin: 0 auto;
     padding: 1rem;
@@ -35,5 +39,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+h1 {
+    color: red;
 }
 </style>
