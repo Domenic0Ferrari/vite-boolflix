@@ -30,7 +30,8 @@ export default {
 <template>
     <div class="card">
         <div class="container_card">
-            <img class="img_card" :src="'https://image.tmdb.org/t/p/w342' + poster_path" alt="">
+            <img class="img_card" v-if="poster_path" :src="'https://image.tmdb.org/t/p/w342' + poster_path" alt="#">
+            <img class="img_card" v-else src="../assets/fallback-image.png" alt="#">
         </div>
         <div class="container_information">
             <div>
@@ -76,9 +77,9 @@ export default {
     display: block;
 }
 
-.container_card:hover {
+/* .container_card:hover {
     display: none;
-}
+} */
 
 .img_card {
     max-width: 100%;
