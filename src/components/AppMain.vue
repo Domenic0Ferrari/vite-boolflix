@@ -35,6 +35,8 @@ export default {
 <style scoped>
 main {
     background-color: #434343;
+    height: 89.5vh;
+    overflow-y: auto;
 }
 
 .container {
@@ -44,13 +46,6 @@ main {
 }
 
 .founded {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.series {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
